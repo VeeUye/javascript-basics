@@ -11,11 +11,11 @@ const getNthElement = (index, array) => {
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.join(',');
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return Array.from(string.replace(/,/g, ''));
 };
 
 const addToArray = (element, array) => {
