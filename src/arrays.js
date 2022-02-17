@@ -39,7 +39,13 @@ const uppercaseWordsInArray = strings => {
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings
+    .toString()
+    .split('')
+    .reverse()
+    .join('')
+    .split(',')
+    .reverse();
 };
 
 const onlyEven = numbers => {
