@@ -55,15 +55,18 @@ const onlyEven = numbers => {
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  return array.slice(0, index).concat(array.slice(index + 1));
 };
 
-const elementsStartingWithAVowel = strings => {
-  // your code here
-};
+function elementsStartingWithAVowel(strings) {
+  // strings.filter(/^[aeiou]/i.test(strings));
+  return strings.filter(e => /^[aeiou]/i.test(e));
+  // /[aeiou]/i.test(string);
+}
 
 const removeSpaces = string => {
-  // your code here
+  console.log(string.replace(/\s/g, ''));
+  return string.replace(/\s/g, '');
 };
 
 const sumNumbers = numbers => {

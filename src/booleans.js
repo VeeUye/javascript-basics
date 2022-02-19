@@ -3,11 +3,12 @@ function negate(a) {
 }
 
 function both(a, b) {
-  if (a === true && b === true) {
-    return true;
-  } else {
-    return false;
-  }
+  //   if (a === true && b === true) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
+  return a === true && b === true;
 }
 
 function either(a, b) {
@@ -99,7 +100,9 @@ function startsWith(char, string) {
 }
 
 function containsVowels(string) {
-  return /[a-z]*[aeiou][a-z]*/i.test(string);
+  // return /[a-z]*[aeiou][a-z]*/i.test(string);
+  return /[aeiou]/i.test(string);
+  // return string.toLowerCase().includes('a', 'e', 'i', 'o', 'u');
 }
 
 function isLowerCase(string) {
