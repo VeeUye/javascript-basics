@@ -28,17 +28,27 @@ const findByName = (name, people) => {
 };
 
 const findHondas = cars => {
-  return cars.filter(entry => {
-    return entry.manufacturer === 'Honda';
+  return cars.filter(object => {
+    return object.manufacturer === 'Honda';
   });
 };
 
 const averageAge = people => {
-  // your code here
+  const arr = Object.values(people);
+  const sum = (accumulator, obj) => accumulator + obj.age;
+  const avg = arr.reduce(sum, 0) / arr.length;
+  return avg;
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+  const person = {
+    name: name,
+    age: age,
+    introduce(newFriend) {
+      return `Hi ${newFriend}, my name is ${person.name} and I am ${person.age}!`;
+    }
+  };
+  return person;
 };
 
 module.exports = {
